@@ -1,0 +1,125 @@
+// variables
+
+// Primary
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46% );
+
+// Neutral 
+$dark-gray: hsl(0, 0%, 59%);
+
+
+// Main styles
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: url('../images/bg-pattern-top.svg') no-repeat bottom -25% left -150%/auto, url('../images/bg-pattern-bottom.svg') no-repeat top -75% right -100%/auto $dark-cyan;
+    height: 100%;
+    width: 100%;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: $dark-gray;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Utility
+.container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+// Card style 
+.card {
+    background: url('../images/bg-pattern-card.svg') no-repeat top #fff;
+    min-width: 350px;
+    text-align: center;
+    border-radius: 1rem;
+     
+    &-heading {
+        padding-top: 6rem;
+
+        &-image {
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                border: 4px solid #fff;
+            }
+        }
+
+        &-text {
+            padding: 1rem 0 1.3rem 0;
+
+            .name {
+                font-weight: 700;
+                color: $very-dark-desaturated-blue;
+
+                .age {
+                    color: $dark-gray;
+                    font-weight: 400;
+                    padding-left: 0.3rem;
+                }
+            }
+
+            .place {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        border-top: 1px dotted $dark-gray;
+
+        &-stat {
+            min-width: 65px;
+            font-size: 0.8rem;
+
+            p:first-child {
+                font-weight: 700;
+                color: $very-dark-desaturated-blue;
+                font-size: 1.1rem;
+            }
+
+            p:last-child {
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+}
